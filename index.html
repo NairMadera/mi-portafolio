@@ -1,206 +1,236 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nair Madera - Filmmaker</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      scroll-behavior: smooth;
-    }
-    header, section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    h1, h2 {
-      color: #1abc9c;
-    }
-    a {
-      color: #9b59b6;
-      text-decoration: none;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #111;
-      padding: 10px 0;
-      z-index: 1000;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #1abc9c;
-      font-weight: bold;
-    }
-    .videos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    video {
-      max-width: 100%;
-      width: 300px;
-      border: 2px solid #9b59b6;
-      border-radius: 10px;
-    }
-    footer {
-      padding: 20px;
-      background: #111;
-      color: #888;
-    }
-    .perfil-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #1abc9c;
-      margin-bottom: 20px;
-    }
-    table {
-      width: 90%;
-      max-width: 600px;
-      margin: 20px auto;
-      border-collapse: collapse;
-      color: #fff;
-    }
-    th, td {
-      padding: 10px;
-      border: 1px solid #1abc9c;
-    }
-    th {
-      background-color: #1abc9c;
-      color: #000;
-    }
-    .whatsapp-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #25D366;
-      color: #000;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .contact-icons a img {
-      width: 40px;
-      height: 40px;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#sobremi">Sobre mí</a>
-    <a href="#tarifas">Tarifas</a>
-    <a href="#portafolio">Portafolio</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nair Madera - Filmmaker</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+        scroll-behavior: smooth;
+      }
+      header,
+      section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+      h1,
+      h2 {
+        color: #1abc9c;
+      }
+      a {
+        color: #9b59b6;
+        text-decoration: none;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #111;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+      nav a {
+        margin: 0 15px;
+        color: #1abc9c;
+        font-weight: bold;
+      }
+      .videos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
 
-  <header id="inicio">
-    <h1>Nair Madera</h1>
-    <p>Filmmaker & Editor de Video</p>
-  </header>
+      video {
+        max-width: 100%;
+        border: 2px solid #9b59b6;
+        border-radius: 10px;
+      }
+      video.hz {
+        aspect-ratio: 16 / 9;
+      }
 
-  <section id="sobremi">
-    <h2>Sobre mí</h2>
-    <img src="img/nair.jpg" alt="Foto de Nair Madera" class="perfil-img">
-    <p>Soy un filmmaker apasionado por contar historias visuales, con enfoque en la narrativa y la estética. Busco transmitir emociones a través de cada plano.</p>
-  </section>
+      video.vt {
+        aspect-ratio: 9 / 16;
+      }
 
-  <section id="tarifas">
-    <h2>Tarifas de Edición</h2>
-    <h3>Formato Vertical (por video)</h3>
-    <table>
-      <tr>
-        <th>Tipo de Edición</th>
-        <th>Precio</th>
-      </tr>
-      <tr>
-        <td>Básica (recortes, zooms, subtítulos)</td>
-        <td>$12</td>
-      </tr>
-      <tr>
-        <td>Intermedia (lo anterior + efectos y sonido)</td>
-        <td>$20</td>
-      </tr>
-      <tr>
-        <td>Compleja (lo anterior + motion graphics, color, 3D)</td>
-        <td>$35</td>
-      </tr>
-    </table>
+      footer {
+        padding: 20px;
+        background: #111;
+        color: #888;
+      }
+      .perfil-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #1abc9c;
+        margin-bottom: 20px;
+        aspect-ratio: 1;
+      }
+      table {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        border-collapse: collapse;
+        color: #fff;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #1abc9c;
+      }
+      th {
+        background-color: #1abc9c;
+        color: #000;
+      }
+      .whatsapp-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #25d366;
+        color: #000;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .contact-icons a img {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobremi">Sobre mí</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-    <h3>Formato Horizontal</h3>
-    <table>
-      <tr>
-        <th>Tipo de Edición</th>
-        <th>Precio por 10 minutos</th>
-        <th>Precio por minuto</th>
-      </tr>
-      <tr>
-        <td>Básica</td>
-        <td>$47</td>
-        <td>$4.7</td>
-      </tr>
-      <tr>
-        <td>Intermedia</td>
-        <td>$70</td>
-        <td>$7</td>
-      </tr>
-      <tr>
-        <td>Compleja</td>
-        <td>$120</td>
-        <td>$12</td>
-      </tr>
-    </table>
-  </section>
+    <header id="inicio">
+      <h1>Nair Madera</h1>
+      <p>Filmmaker & Editor de Video</p>
+    </header>
 
-  <section id="portafolio">
-    <h2>Mi trabajo</h2>
-    <div class="videos">
-      <video controls src="videos/video1.mp4"></video>
-      <video controls src="videos/video2.mp4"></video>
-      <video controls src="videos/video3.mp4"></video>
-      <video controls src="videos/video4.mp4"></video>
-      <video controls src="videos/video5.mp4"></video>
-      <video controls src="videos/video6.mp4"></video>
-      <video controls src="videos/video7.mp4"></video>
-    </div>
-  </section>
+    <section id="sobremi">
+      <h2>Sobre mí</h2>
+      <img src="./img/nair.jpg" alt="Foto de Nair Madera" class="perfil-img" />
+      <p>
+        Soy un filmmaker apasionado por contar historias visuales, con enfoque
+        en la narrativa y la estética. Busco transmitir emociones a través de
+        cada plano.
+      </p>
+    </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <div class="contact-icons">
-      <a href="mailto:nairmadera80@gmail.com" target="_blank">
-        <img src="img/gmail.png" alt="Gmail">
+    <section id="tarifas">
+      <h2>Tarifas de Edición</h2>
+      <h3>Formato Vertical (por video)</h3>
+      <table>
+        <tr>
+          <th>Tipo de Edición</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Básica (recortes, zooms, subtítulos)</td>
+          <td>$12</td>
+        </tr>
+        <tr>
+          <td>Intermedia (lo anterior + efectos y sonido)</td>
+          <td>$20</td>
+        </tr>
+        <tr>
+          <td>Compleja (lo anterior + motion graphics, color, 3D)</td>
+          <td>$35</td>
+        </tr>
+      </table>
+
+      <h3>Formato Horizontal</h3>
+      <table>
+        <tr>
+          <th>Tipo de Edición</th>
+          <th>Precio por 10 minutos</th>
+          <th>Precio por minuto</th>
+        </tr>
+        <tr>
+          <td>Básica</td>
+          <td>$47</td>
+          <td>$4.7</td>
+        </tr>
+        <tr>
+          <td>Intermedia</td>
+          <td>$70</td>
+          <td>$7</td>
+        </tr>
+        <tr>
+          <td>Compleja</td>
+          <td>$120</td>
+          <td>$12</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="portafolio">
+      <h2>Mi trabajo</h2>
+      <div class="videos">
+        <video class="hz" controls src="/Videos/video1.mp4"></video>
+        <video class="hz" controls src="/Videos/video2.mp4"></video>
+        <video class="hz" controls src="/Videos/video3.mp4"></video>
+        <video class="hz" controls src="/Videos/video5.mp4"></video>
+        <video class="hz" controls src="/Videos/video6.mp4"></video>
+        <video class="hz" controls src="/Videos/video7.mp4"></video>
+        <video class="vt" controls src="/Videos/video4.mp4"></video>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contact-icons">
+        <a href="mailto:nairmadera80@gmail.com" target="_blank">
+          <img src="img/gmail.png" alt="Gmail" />
+        </a>
+        <a href="https://instagram.com/nacho._.madera" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" />
+        </a>
+        <a
+          href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video."
+          target="_blank"
+        >
+          <img src="img/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
+      <p>
+        Correo:
+        <a href="mailto:nairmadera80@gmail.com">nairmadera80@gmail.com</a>
+      </p>
+      <p>
+        Instagram:
+        <a href="https://instagram.com/nacho._.madera" target="_blank"
+          >@nacho._.madera</a
+        >
+      </p>
+      <p>Teléfono: +57 314 679 9223</p>
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video."
+        target="_blank"
+      >
+        Escríbeme por WhatsApp
       </a>
-      <a href="https://instagram.com/nacho._.madera" target="_blank">
-        <img src="img/instagram.png" alt="Instagram">
-      </a>
-      <a href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video." target="_blank">
-        <img src="img/whatsapp.png" alt="WhatsApp">
-      </a>
-    </div>
-    <p>Correo: <a href="mailto:nairmadera80@gmail.com">nairmadera80@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/nacho._.madera" target="_blank">@nacho._.madera</a></p>
-    <p>Teléfono: +57 314 679 9223</p>
-    <a class="whatsapp-btn" href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video." target="_blank">
-      Escríbeme por WhatsApp
-    </a>
-  </section>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Nair Madera. Todos los derechos reservados.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 Nair Madera. Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>
