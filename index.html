@@ -62,16 +62,17 @@
         }
       }
 
-      video {
+      iframe {
         width: 100%;
         border: 2px solid #9b59b6;
         border-radius: 10px;
       }
-      video.hz {
+      iframe.hz {
         aspect-ratio: 16 / 9;
       }
 
-      video.vt {
+      iframe.vt {
+        width: 100%;
         aspect-ratio: 9 / 16;
       }
 
@@ -201,48 +202,11 @@
     <section id="portafolio">
       <h2>Mi trabajo</h2>
       <div class="videos">
-        <video
-          class="hz"
-          controls
-          preload="metadata"
-          src="./Videos/video1.mp4"
-        ></video>
-        <video
-          class="hz"
-          controls
-          preload="metadata"
-          src="./Videos/video2.mp4"
-        ></video>
-        <video
-          class="hz"
-          controls
-          preload="metadata"
-          src="./Videos/video3.mp4"
-        ></video>
-        <video
-          class="hz"
-          controls
-          preload="metadata"
-          src="./Videos/video5.mp4"
-        ></video>
-        <video
-          class="hz"
-          controls
-          preload="metadata"
-          src="./Videos/video6.mp4"
-        ></video>
-        <video
-          class="hz"
-          controls
-          preload="metadata"
-          src="./Videos/video7.mp4"
-        ></video>
-        <video
-          class="vt"
-          controls
-          preload="metadata"
-          src="./Videos/video4.mp4"
-        ></video>
+        <!-- CAMBIAR ID DE YOUTUBE -->
+        <!-- VIDEO HORIZONTAL -->
+        <iframe class="hz" src="https://www.youtube.com/embed/IxQ1p5doUGA" title="Meet &amp; Greet Bogotá 💕✨" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- VIDEO VERTICAL -->
+        <iframe class="vt" src="https://www.youtube.com/embed/8hEPhv0J1Gk" title="No Hit LVL 1 en los 7 Souls" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
 
