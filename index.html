@@ -127,6 +127,46 @@
         height: 40px;
       }
     </style>
+    <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+  }
+
+  /* ... todos tus estilos existentes ... */
+
+  .videos iframe {
+    width: 100%;
+    border: 2px solid #9b59b6;
+    border-radius: 10px;
+  }
+
+  /* 🔥 Animación al cargar */
+  .videos iframe {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  .videos iframe:nth-child(1) { animation-delay: 0.2s; }
+  .videos iframe:nth-child(2) { animation-delay: 0.4s; }
+  .videos iframe:nth-child(3) { animation-delay: 0.6s; }
+  .videos iframe:nth-child(4) { animation-delay: 0.8s; }
+  .videos iframe:nth-child(5) { animation-delay: 1s; }
+  .videos iframe:nth-child(6) { animation-delay: 1.2s; }
+  .videos iframe:nth-child(7) { animation-delay: 1.4s; }
+  .videos iframe:nth-child(8) { animation-delay: 1.6s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
   </head>
   <body>
     <nav>
