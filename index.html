@@ -66,13 +66,12 @@
         width: 100%;
         border: 2px solid #9b59b6;
         border-radius: 10px;
+        display: block;
       }
       iframe.hz {
         aspect-ratio: 16 / 9;
       }
-
       iframe.vt {
-        width: 100%;
         aspect-ratio: 9 / 16;
       }
 
@@ -125,40 +124,32 @@
       .contact-icons a img {
         width: 40px;
         height: 40px;
+        object-fit: contain;
+        display: block;
       }
-      body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    scroll-behavior: smooth;
-  }
-    </style
-      
-      <style>
-  /* Tus estilos anteriores (body, nav, .videos, etc.) */
 
-  /* 🔥 Animación para los iframes */
-  .videos iframe,
-  .videos > div iframe {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-  }
+      /* 🔥 Animación al cargar los iframes */
+      .videos iframe {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+      .videos iframe:nth-child(1) { animation-delay: 0.2s; }
+      .videos iframe:nth-child(2) { animation-delay: 0.4s; }
+      .videos iframe:nth-child(3) { animation-delay: 0.6s; }
+      .videos iframe:nth-child(4) { animation-delay: 0.8s; }
+      .videos iframe:nth-child(5) { animation-delay: 1s; }
+      .videos iframe:nth-child(6) { animation-delay: 1.2s; }
+      .videos iframe:nth-child(7) { animation-delay: 1.4s; }
+      .videos iframe:nth-child(8) { animation-delay: 1.6s; }
 
-  .videos iframe:nth-child(1),
-  .videos > div:nth-child(1) iframe { animation-delay: 0.2s; }
-  .videos iframe:nth-child(2),
-  .videos > div:nth-child(2) iframe { animation-delay: 0.4s; }
-  /* ... sigue con los demás nth-child ... */
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -234,80 +225,52 @@
     <section id="portafolio">
       <h2>Mi trabajo</h2>
       <div class="videos">
-        <!-- CAMBIAR ID DE YOUTUBE -->
-        <!-- VIDEO HORIZONTAL -->
-        <iframe class="hz" src="https://www.youtube.com/embed/w92JpvoSpXs" title="Meet &amp; Greet Bogotá 💕✨" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe class="hz" src="https://www.youtube.com/embed/BBPu4L03vqM" 
-      title="Video 2 - Nair Madera"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-        <!-- VIDEO 3 -->
-    <iframe class="hz" src="https://www.youtube.com/embed/nOxC2QgDUHY" 
-      title="Video 3 - Nair Madera"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-        <!-- VIDEO 4 -->
-    <iframe class="hz" src="https://www.youtube.com/embed/U8DAyfGxaFg" 
-      title="Video 4 - Nair Madera"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-        <!-- VIDEO 5 -->
-    <iframe class="hz" src="https://www.youtube.com/embed/sluKw0Epj7k" 
-      title="Video 5 - Nair Madera"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-        <!-- VIDEO VERTICAL -->
-        <iframe class="vt"
-  src="https://www.youtube.com/embed/y7_mzVPgZwg"
-  title="Short de YouTube"
-  loading="lazy"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen></iframe>
+        <!-- Video horizontales -->
+        <iframe class="hz" src="https://www.youtube.com/embed/w92JpvoSpXs" title="Video 1 - Nair Madera" loading="lazy" allowfullscreen></iframe>
+        <iframe class="hz" src="https://www.youtube.com/embed/BBPu4L03vqM" title="Video 2 - Nair Madera" loading="lazy" allowfullscreen></iframe>
+        <iframe class="hz" src="https://www.youtube.com/embed/nOxC2QgDUHY" title="Video 3 - Nair Madera" loading="lazy" allowfullscreen></iframe>
+        <iframe class="hz" src="https://www.youtube.com/embed/U8DAyfGxaFg" title="Video 4 - Nair Madera" loading="lazy" allowfullscreen></iframe>
+        <iframe class="hz" src="https://www.youtube.com/embed/sluKw0Epj7k" title="Video 5 - Nair Madera" loading="lazy" allowfullscreen></iframe>
+        <!-- Short vertical -->
+        <iframe class="vt" src="https://www.youtube.com/embed/y7_mzVPgZwg" title="Short - Nair Madera" loading="lazy" allowfullscreen></iframe>
       </div>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
-  <div class="contact-icons">
-    <!-- Gmail -->
-    <a href="mailto:nairmadera80@gmail.com" target="_blank">
-      <img src="img/gmail.png" alt="Gmail" />
-    </a>
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/nair_jmt/" target="_blank">
-      <img src="img/instagram.png" alt="Instagram" />
-    </a>
-    <!-- WhatsApp -->
-    <a
-      href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video."
-      target="_blank"
-    >
-      <img src="img/whatsapp.png" alt="WhatsApp" />
-    </a>
-  </div>
+      <div class="contact-icons">
+        <a href="mailto:nairmadera80@gmail.com" target="_blank">
+          <img src="img/gmail.png" alt="Gmail" />
+        </a>
+        <a href="https://www.instagram.com/nair_jmt/" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" />
+        </a>
+        <a
+          href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video."
+          target="_blank"
+        >
+          <img src="img/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
 
-  <p>
-    Correo:
-    <a href="mailto:nairmadera80@gmail.com">nairmadera80@gmail.com</a>
-  </p>
-  <p>
-    Instagram:
-    <a href="https://www.instagram.com/nair_jmt/" target="_blank">@nair_jmt</a>
-  </p>
-  <p>Teléfono: +57 314 679 9223</p>
+      <p>
+        Correo:
+        <a href="mailto:nairmadera80@gmail.com">nairmadera80@gmail.com</a>
+      </p>
+      <p>
+        Instagram:
+        <a href="https://www.instagram.com/nair_jmt/" target="_blank">@nair_jmt</a>
+      </p>
+      <p>Teléfono: +57 314 679 9223</p>
 
-  <a
-    class="whatsapp-btn"
-    href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video."
-    target="_blank"
-  >
-    Escríbeme por WhatsApp
-  </a>
-</section>
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/573146799223?text=Hola%20Nair%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20edici%C3%B3n%20de%20video."
+        target="_blank"
+      >
+        Escríbeme por WhatsApp
+      </a>
+    </section>
 
     <footer>
       <p>&copy; 2025 Nair Madera. Todos los derechos reservados.</p>
