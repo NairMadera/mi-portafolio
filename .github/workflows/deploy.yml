@@ -23,7 +23,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         env:
-            PORTFOLIO_URL: 'https://raw.githubusercontent.com/NairMadera/mi-portafolio/refs/heads/dev/public/portfolio.json'
+            PORTFOLIO_URL: 'https://raw.githubusercontent.com/NairMadera/mi-portafolio/refs/heads/main/public/portfolio.json'
 
   deploy:
     needs: build
