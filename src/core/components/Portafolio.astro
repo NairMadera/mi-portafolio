@@ -1,19 +1,22 @@
 ---
 import { YouTube } from "astro-embed";
 import type { VideoItem } from "../lib/types";
+import { PORTFOLIO_URL } from "../lib/utils";
 
-interface Props {
-  videos?: VideoItem[];
-}
+const res = await fetch(PORTFOLIO_URL);
+const { projects } = (await res.json()) as { projects: VideoItem[] };
 
-const { videos } = Astro.props;
+const items = projects.map((v) => ({
+  ...v,
+  orientation: (v.orientation ?? "horizontal") as "horizontal" | "vertical",
+}));
 ---
 
 <section id="portafolio" class="portafolio">
   <h2 class="section-title">Mi trabajo</h2>
   <div class="bento">
     {
-      videos?.map((video) => (
+      items.map((video) => (
         <YouTube
           class:list={[
             "card",

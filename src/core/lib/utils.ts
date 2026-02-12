@@ -11,3 +11,5 @@ export const LINKS = {
   EMAIL: `mailto:${CONTACT_INFO.EMAIL}`,
   PHONE: `tel:${CONTACT_INFO.PHONE}`,
 };
+
+export const PORTFOLIO_URL = import.meta.env.PORTFOLIO_URL;
