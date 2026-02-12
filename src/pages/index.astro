@@ -1,17 +1,29 @@
 ---
-
+import Contacto from "../core/components/Contacto.astro";
+import Footer from "../core/components/Footer.astro";
+import Header from "../core/components/Header.astro";
+import Hero from "../core/components/Hero.astro";
+import Portafolio from "../core/components/Portafolio.astro";
+import Tarifas from "../core/components/Tarifas.astro";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Nair Madera — Filmmaker & Editor de Video</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Hero />
+      <Tarifas />
+      <Portafolio />
+      <Contacto />
+      <Footer />
+    </main>
+  </body>
 </html>

@@ -1,0 +1,122 @@
+---
+const verticalRates = [
+  { type: 'Básico (recortes, acene, atributos)', price: '$12' },
+  { type: 'Intermedio (lo anterior + efectos y sonido)', price: '$20' },
+  { type: 'Complejo (lo anterior + motion graphics, color, 3D)', price: '$35' },
+];
+
+const horizontalRates = [
+  { type: 'Básica', per10min: '$47', perMin: '$4.7' },
+  { type: 'Intermedia', per10min: '$70', perMin: '$7' },
+  { type: 'Compleja', per10min: '$120', perMin: '$12' },
+];
+---
+
+<section id="tarifas" class="tarifas">
+  <h2 class="section-title">Tarifas de Edición</h2>
+
+  <div class="tables-wrap">
+    <div class="table-block">
+      <h3 class="table-caption">Formato Vertical (por video)</h3>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Tipo de Edición</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          {verticalRates.map((row) => (
+            <tr>
+              <td>{row.type}</td>
+              <td>{row.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-block">
+      <h3 class="table-caption">Formato Horizontal</h3>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Tipo de Edición</th>
+            <th>Precio por 10 minutos</th>
+            <th>Precio por minuto</th>
+          </tr>
+        </thead>
+        <tbody>
+          {horizontalRates.map((row) => (
+            <tr>
+              <td>{row.type}</td>
+              <td>{row.per10min}</td>
+              <td>{row.perMin}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tarifas {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    color: var(--accent);
+    margin: 0 0 2.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .tables-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .table-block {
+    width: 100%;
+  }
+
+  .table-caption {
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0 0 1rem;
+    font-weight: 500;
+  }
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--accent);
+  }
+
+  .pricing-table thead {
+    background: var(--accent);
+  }
+
+  .pricing-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    color: #000;
+    font-weight: 600;
+    border: 1px solid var(--accent);
+  }
+
+  .pricing-table td {
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    border: 1px solid var(--accent);
+  }
+
+  .pricing-table tbody tr:nth-child(even) {
+    background: rgba(0, 255, 153, 0.05);
+  }
+</style>

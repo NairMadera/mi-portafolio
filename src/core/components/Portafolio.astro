@@ -1,0 +1,100 @@
+---
+import { YouTube } from "astro-embed";
+import type { VideoItem } from "../lib/types";
+
+interface Props {
+  videos?: VideoItem[];
+}
+
+const { videos } = Astro.props;
+---
+
+<section id="portafolio" class="portafolio">
+  <h2 class="section-title">Mi trabajo</h2>
+  <div class="bento">
+    {
+      videos?.map((video) => (
+        <YouTube
+          class:list={[
+            "card",
+            video.orientation === "vertical" ? "bento-v" : "bento-h",
+          ]}
+          id={video.videoId}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .portafolio {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    color: var(--accent);
+    margin: 0 0 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .bento {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bento {
+      grid-template-columns: 1fr;
+    }
+
+    .bento-h-wide {
+      grid-column: span 1 !important;
+    }
+
+    .bento-v {
+      grid-row: span 2;
+    }
+  }
+
+  .bento-h {
+    grid-column: span 1;
+    grid-row: span 1;
+    aspect-ratio: 16 / 9;
+  }
+
+  .bento-v {
+    grid-column: span 1;
+    grid-row: span 2;
+    aspect-ratio: 9 / 16;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(0, 255, 153, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+    min-height: 0;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.15);
+  }
+</style>

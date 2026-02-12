@@ -1,0 +1,53 @@
+---
+const navLinks = [
+  { href: "#inicio", label: "Inicio" },
+  { href: "#sobre-mi", label: "Sobre mi" },
+  { href: "#tarifas", label: "Tarifas" },
+  { href: "#portafolio", label: "Portafolio" },
+  { href: "#contacto", label: "Contacto" },
+];
+---
+
+<header class="header">
+  <nav class="nav">
+    {
+      navLinks.map((link) => (
+        <a class="nav-link" href={link.href}>
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1.5rem 2rem;
+    background-color: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .nav-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .nav-link:hover {
+    opacity: 0.85;
+  }
+</style>
