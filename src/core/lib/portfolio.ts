@@ -15,7 +15,6 @@ export const PORTFOLIO = [
     videoId: "sluKw0Epj7k",
   },
   {
-    videoId: "y7_mzVPgZwg",
-    orientation: "vertical",
+    videoId: "jDGkQDYEEu4",
   },
 ];
