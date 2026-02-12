@@ -1,14 +1,10 @@
 ---
 import { YouTube } from "astro-embed";
-import type { VideoItem } from "../lib/types";
-import { PORTFOLIO_URL } from "../lib/utils";
+import { PORTFOLIO } from "../lib/portfolio";
 
-const res = await fetch(PORTFOLIO_URL);
-const { projects } = (await res.json()) as { projects: VideoItem[] };
-
-const items = projects.map((v) => ({
-  ...v,
-  orientation: (v.orientation ?? "horizontal") as "horizontal" | "vertical",
+const items = PORTFOLIO.map((video) => ({
+  ...video,
+  orientation: (video.orientation ?? "horizontal") as "horizontal" | "vertical",
 }));
 ---
 

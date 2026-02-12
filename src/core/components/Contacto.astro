@@ -1,5 +1,5 @@
 ---
-import { CONTACT_INFO, LINKS } from "../lib/utils";
+import { CONTACT_INFO, LINKS } from "../lib/constants";
 ---
 
 <section id="contacto" class="contacto">
@@ -95,7 +95,9 @@ import { CONTACT_INFO, LINKS } from "../lib/utils";
   </div>
   <a
     class="whatsapp-btn"
-    href={LINKS.WHATSAPP}
+    href={encodeURIComponent(
+      `${LINKS.WHATSAPP}?text=Hola, me interesa tu servicio. ¿Podrías ayudarme?`
+    )}
     target="_blank"
     rel="noopener noreferrer">Escríbeme por WhatsApp</a
   >
